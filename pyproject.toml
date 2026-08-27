@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+
+[project]
+name = "synapsefs"
+version = "0.1.0.dev0"
+description = "A peer-to-peer CRDT-based file synchronization system with adaptive synchronization."
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+license-files = ["LICENSE"]
+
+authors = [
+    { name = "SynapseFS Contributors" }
+]
+
+keywords = [
+    "crdt",
+    "distributed-systems",
+    "peer-to-peer",
+    "filesystem",
+    "synchronization",
+]
+
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Distributed Computing",
+]
+
+dependencies = []
+
+
+[project.urls]
+Repository = "https://github.com/sannx4/synapsefs"
+Issues = "https://github.com/sannx4/synapsefs/issues"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/synapsefs"]
