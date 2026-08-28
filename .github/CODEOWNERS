@@ -1,0 +1,26 @@
+# Default ownership for the SynapseFS repository.
+
+- @sannx4
+
+# Repository and GitHub workflow configuration.
+
+/.github/ @sannx4
+
+# Architecture and technical documentation.
+
+/docs/ @sannx4
+
+# Core Python implementation.
+
+/src/ @sannx4
+
+# Tests and experiments.
+
+/tests/ @sannx4
+/experiments/ @sannx4
+
+# Infrastructure and product surfaces.
+
+/infra/ @sannx4
+/apps/ @sannx4
+/extensions/ @sannx4
