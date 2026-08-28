@@ -29,10 +29,11 @@ htmlcov/
 # IDE
 .idea/
 
-# VS Code local configuration
+# VS Code shared project configuration
 .vscode/*
 !.vscode/extensions.json
-!.vscode/settings.example.json
+!.vscode/settings.json
+!.vscode/tasks.json
 
 # Windows
 Thumbs.db
