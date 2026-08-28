@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "dev: sync",
+            "type": "process",
+            "command": "uv",
+            "args": ["sync", "--group", "dev"],
+            "problemMatcher": []
+        },
+        {
+            "label": "dev: lint",
+            "type": "process",
+            "command": "uv",
+            "args": ["run", "ruff", "check", "."],
+            "problemMatcher": []
+        },
+        {
+            "label": "dev: format",
+            "type": "process",
+            "command": "uv",
+            "args": ["run", "ruff", "format", "."],
+            "problemMatcher": []
+        },
+        {
+            "label": "dev: format-check",
+            "type": "process",
+            "command": "uv",
+            "args": ["run", "ruff", "format", "--check", "."],
+            "problemMatcher": []
+        },
+        {
+            "label": "dev: pre-commit",
+            "type": "process",
+            "command": "uv",
+            "args": ["run", "pre-commit", "run", "--all-files"],
+            "problemMatcher": []
+        },
+        {
+            "label": "dev: smoke",
+            "type": "process",
+            "command": "uv",
+            "args": [
+                "run",
+                "python",
+                "-c",
+                "import synapsefs; print(synapsefs.__version__)"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
