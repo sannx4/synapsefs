@@ -1,0 +1,82 @@
+name: Bug report
+description: Report a reproducible problem in SynapseFS.
+title: "[Bug]: "
+labels:
+  - "type:bug"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a SynapseFS problem.
+        Please provide enough information to reproduce the issue.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What went wrong?
+      placeholder: Describe the observed behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Provide the smallest reliable sequence that reproduces the problem.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: input
+    id: commit
+    attributes:
+      label: SynapseFS commit or version
+      description: Commit hash, branch, or release version if known.
+      placeholder: e.g. fd90c10
+
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: e.g. Python 3.13.15
+
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or output
+      description: Remove secrets, credentials, private keys, and sensitive data before posting.
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true
+        - label: I removed secrets and sensitive information from logs.
+          required: true

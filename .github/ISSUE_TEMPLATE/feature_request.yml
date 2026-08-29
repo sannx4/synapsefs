@@ -1,0 +1,72 @@
+name: Feature request
+description: Propose an improvement or new capability for SynapseFS.
+title: "[Feature]: "
+labels:
+  - "type:feature"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem first, then the proposed solution.
+        SynapseFS prioritizes correctness, reproducibility, and measurable system behavior.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or motivation
+      description: What problem would this feature solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the desired behavior or implementation direction.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe other approaches that were considered.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Core / CRDT
+        - Filesystem
+        - Storage
+        - Synchronization
+        - Networking
+        - Security
+        - Optimization
+        - CLI / UX
+        - Experiments
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: correctness
+    attributes:
+      label: Correctness impact
+      description: Could this change replica semantics, conflict handling, persistence, or convergence?
+
+  - type: textarea
+    id: measurement
+    attributes:
+      label: Measurement or validation
+      description: How should we verify that the feature works?
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I searched existing issues for a similar request.
+          required: true
